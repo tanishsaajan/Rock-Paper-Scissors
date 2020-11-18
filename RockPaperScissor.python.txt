@@ -1,0 +1,33 @@
+import random as np
+print("1:Rock\n2:Paper\n3:Scissors")
+
+p="y"
+while(p=="y"or p=="Y"):
+    n=int(input("Enter Your Choice"))
+    if(n==1):
+        print("Your Choice is:Rock")
+    elif n==2:
+        print("Your Choice is:Paper")
+    else:
+        print("Your Choice is:Scissor")
+    x=np.randint(1,3)
+    if(x==1):
+        print("Computers Choice is:Rock")
+    elif x==2:
+        print("Computers Choice is:Paper")
+    else:
+        print("Computers Choice is:Scissor")
+    if(n==1 and x==3)or(n==3 and x==1):
+        print("Rock Wins")
+    elif n==2 and x==1or(n==1 and x==2):
+        print("Paper Wins")
+    elif n==3 and x==2or(n==2 and x==3):
+        print("Scissor Wins")
+    elif n==x:
+        print("It is a draw")
+    i=input("Do you want to Play Again Y Or N")
+    if(i=="y" or i=="Y"):
+        p=i
+    else:
+        break
+    
